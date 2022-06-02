@@ -1,0 +1,20 @@
+@use 'sass:math';
+
+
+// COLORS
+$chamois: #F1DDBF;
+$comet: #525E75;
+$white: #FFFFFF;
+$mine-shaft: #333333;
+
+// FONT
+$font-weight-bold: 700;
+
+//* Function: rem()
+//* DESCRIPTION: px -> rem conversion
+@function rem($px, $base: 16px) {
+  @return math.div($px, $base) * 1rem;
+}
+
+
+
