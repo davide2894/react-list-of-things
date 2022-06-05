@@ -16,8 +16,9 @@ export default function ListOfThings() {
     function addItem() {
         setCount(prevState => prevState + 1);
         setThingsComponentsArray(
+            prevThingsComponentsArray =>
             [
-                ...thingsComponentsArray,
+                ...prevThingsComponentsArray,
                 <Thing key={count} thing={`Thing ${count}`}/> 
             ]
         );

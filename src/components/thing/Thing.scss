@@ -1,0 +1,10 @@
+@import '../../shared';
+
+.thing {
+    display: block;
+    margin-bottom: 20px;
+    font-size: rem(20px);
+    color: $mine-shaft;
+    font-weight: $font-weight-bold;
+    text-align: center;
+}
