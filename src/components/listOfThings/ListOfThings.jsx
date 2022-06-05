@@ -1,5 +1,6 @@
 import './ListOfThings.scss';
 import { useState } from 'react';
+import Thing from '../thing/Thing';
 
 export default function ListOfThings() {
     /**
@@ -9,20 +10,23 @@ export default function ListOfThings() {
      * 
      * Don't worry about fixing `addItem` quite yet.
      */
-     const thingsArray = ["Thing 1", "Thing 2"]
-    
-     function addItem() {
-        // We'll work on this next
-        // const newThingText = `Thing ${thingsArray.length + 1}`
-        // thingsArray.push(newThingText)
-        // document.getElementById()
-        // console.log(thingsArray)
-     }
+    const [count, setCount] = useState(0);
+    const [thingsComponentsArray, setThingsComponentsArray] = useState([]);
+        
+    function addItem() {
+        setCount(prevState => prevState + 1);
+        setThingsComponentsArray(
+            [
+                ...thingsComponentsArray,
+                <Thing key={count} thing={`Thing ${count}`}/> 
+            ]
+        );
+    }
     
     return(
         <div className='listOfThings'>
             <button className='listOfThings__button' onClick={addItem}>ADD ITEM</button>
-            {thingsArray}
+            {thingsComponentsArray}
         </div>
     )
 }
