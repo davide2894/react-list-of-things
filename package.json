@@ -1,5 +1,6 @@
 {
-  "name": "react-list-of-things",
+  "name": "react-form-state-practice",
+  "homepage": "https://davide2894.github.io/react-form-state-practice/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
